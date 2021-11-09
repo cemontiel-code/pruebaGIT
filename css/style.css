@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Yaldevi&display=swap");
+:root {
+  font-size: 18px;
+  font-family: "Yaldevi", "Montserrat", sans-serif;
+  --color0: #222831;
+  --color1: #393e46;
+  --color2: #00adb5;
+  --color3: #eeeeee;
+}
+
+header {
+  background-image: url(../assets/thisisengineering-raeng-M_NvKwSOkug-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 10vmax;
+  align-items: center;
+}
+
+#indexheader {
+  background-image: url(../assets/samuel-regan-asante-g9A2llpDObU-unsplash.jpg);
+  background-size: cover;
+  height: 40vmax;
+  align-items: center;
+}
+
+#h2over {
+  background-color: #393e4683;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+header a {
+  color: var(--color3);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 700ms;
+  width: 100%;
+  padding: 5px;
+}
+
+#indexheader a:hover {
+  background-color: #393e4683;
+}
+
+header svg {
+  color: var(--color2);
+  width: 150px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  color:var(--color0);
+}
+
+footer {
+  padding: 1vh 2vh;
+  display: flex;
+  margin-bottom: 0rem;
+  background: var(--color2);
+  bottom: 0;
+}
+
+#inicio{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+textarea {
+  width: 95%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  overflow-y: scroll;
+}
+
+#contacts-form{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+
+
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  
+}
+
+input[type="submit"]{
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--color3);
+  background-color: var(--color1);
+}
+
+
+input[type="submit"]:hover{
+  background-color: var(--color2);
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+#hOverlay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mainBody {
+  margin-top: 2rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  padding: 2.5%;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  color: var(--color1);
+}
+.navbar {
+  position: sticky;
+  background-color: var(--color1);
+  transition: width 300ms ease;
+  overflow: hidden;
+  height: 3.5rem;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  flex-basis: 7rem;
+}
+
+.nav-item {
+  list-style: none;
+  height: 100%;
+  color: var(--color3);
+  transition: font-size 200ms;
+  padding: 1.2vh;
+}
+
+.nav-item:first-child {
+  background-color: var(--color2);
+  align-content: flex-start;
+}
+
+.nav-item a {
+  color: var(--color3);
+  height: 100%;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  font-size: 24px;
+  background-color: #445c7c;
+}
+
+.social-list{
+  display:flex;
+  flex-flow: row ;
+  flex-basis: 3;
+  color: #222831;
+}
+
+.soc-item{
+  list-style: none;
+  height: 100%;
+  width: 50px;
+  color: var(--color3);
+  transition: font-size 200ms;
+  padding: 1.2vh;
+}
+
+#logo-img{
+  animation-name: girar;
+  animation-duration: 1.7s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes girar {
+  0%   {color: hsl(183, 100%, 35%);transform: rotate(0deg)}
+  25%  {color:hsl(193, 100%, 35%); transform: rotate(90deg)}
+  50%  {color:hsl(203, 100%, 35%); transform: rotate(180deg)}
+  75%  {color:hsl(193, 100%, 35%); transform: rotate(270deg)}
+  100% {color:hsl(183, 100%, 35%);transform: rotate(360deg);}
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 720px) {
+  body {
+    background-color: white;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .mainBody {
+    margin: 2vw;
+  }
+
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+  }
+  .nav-link span {
+    display: hidden;
+  }
+}
