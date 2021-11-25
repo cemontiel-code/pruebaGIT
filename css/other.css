@@ -8,20 +8,6 @@
   --color3: #eeeeee;
 }
 
-header {
-  background-image: url(../assets/bg-index-header.jpg);
-  background-position: center center;
-  background-size: cover;
-  height: 10vmax;
-  align-items: center;
-}
-
-.header--index {
-  background-image: url(../assets/bg-index-header.jpg);
-  background-size: cover;
-  height: 95vh;
-  align-items: center;
-}
 
 #h2over {
   background-color: #393e4683;
@@ -31,24 +17,8 @@ header {
   height: 100%;
 }
 
-header a {
-  color: var(--color3);
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 700ms;
-  width: 100%;
-  padding: 5px;
-}
-
 #indexheader a:hover {
   background-color: #393e4683;
-}
-
-header svg {
-  color: var(--color2);
-  width: 150px;
 }
 
 html {
@@ -120,7 +90,7 @@ label {
   justify-content: center;
   width: 100%;
   height: 100%;
-}
+}/*
 .contentContainer{
   display:flex;
   padding: 2.5%;
@@ -130,6 +100,7 @@ label {
   background-size: cover;
   color: var(--color1);
 }
+*/
 #mainBodyIndex {
   background-image: url(../assets/bg-index-min.png);
 }
@@ -220,6 +191,166 @@ label {
     transform: rotate(360deg);
   }
 }
+/*sass made css */
+.header {
+  height: 10vmax;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #eeeeee;
+  text-decoration: none;}
+  .header svg {
+    color: var(--color2);
+    width: 150px; }
+
+.header--proyect {
+  height: 10vmax;
+  align-items: center; }
+
+.header--index {
+  background-image: url(../assets/bg-index-header.jpg);
+  background-size: cover;
+  height: 95vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #eeeeee; }
+  .header--index svg {
+    color: #00adb5;
+    width: 150px; }
+  .header--index a {
+    height: 94vh;
+    width: 98vw; }
+  .header--index a:hover {
+    background-color: #393e4683; }
+
+.header__titleSpan--index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.navbar {
+  position: sticky;
+  background-color: #222831;
+  transition: width 300ms ease;
+  overflow: hidden;
+  height: 3.5rem; }
+
+.navbar__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  flex-basis: 7rem; }
+
+.navbar__item {
+  list-style: none;
+  height: 100%;
+  color: #eeeeee;
+  transition: font-size 200ms;
+  padding: 1.2vh; }
+  .navbar__item a {
+    color: #eeeeee;
+    height: 100%;
+    text-decoration: none; }
+  .navbar__item svg {
+    color: black;
+    transition: color 200ms;
+    width: 40px;
+   }
+
+.navbar__item:first-child {
+  background-color: #00adb5;
+  align-content: flex-start; }
+  .navbar__item:first-child:hover svg {
+  color: white; }
+
+.navbar__item:hover {
+  font-size: 24px;
+  background-color: #445c7c; }
+
+.background--proyect{
+  background-image: url(../assets/work.jpg);
+  background-size: cover;
+}
+
+.contentContainer {
+  padding: 2.5%;
+  height: 60vh;
+  padding: auto; }
+
+.contentContainer--index {
+  padding: 2.5%;
+  height: 60vh;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../assets/bg-index-min.png); }
+  .contentContainer--index p {
+    width: 100%; }
+
+.contentContainer--indexContent {
+  padding: 2.5%;
+  height: 70vh;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid: auto auto auto; }
+
+.contentContainer--proyect {
+  padding: 2.5%;
+  height: 40vh;
+  width: 80vw;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: white;
+  padding: auto; }
+  
+.contSiteMap {
+  background-color: #00adb5;
+  padding: 2%;
+  margin: 0.5rem;
+  border-radius: 15px;
+  box-shadow: #393e4683 5px 5px 5px;
+  padding: 0.75rem; }
+  
+.contBusiness {
+  grid-area: 1/1/ span 1 / span 3;
+  margin: 0.5rem;
+  padding: 2%;
+  border-radius: 15px;
+  box-shadow: #393e4683 5px 5px 5px;
+  font-size: 36px;
+  color: var(--color3);
+  background-size: cover;
+  background-position: 15% 25%;
+  background-image: url(../assets/work.jpg); }
+
+.contProyect {
+  margin: 0.5rem;
+  font-size: 36px;
+  padding: 2%;
+  color: var(--color3);
+  border-radius: 15px;
+  box-shadow: #393e4683 5px 5px 5px;
+  background-size: cover;
+  background-image: url(../assets/proyect.jpg); }
+
+.contService {
+  margin: 0.5rem;
+  padding: 2%;
+  font-size: 36px;
+  color: var(--color3);
+  border-radius: 15px;
+  box-shadow: #393e4683 5px 5px 5px;
+  background-size: cover;
+  background-image: url(../assets/support.jpg); }
+
+
 
 /* Small screens */
 @media only screen and (max-width: 720px) {

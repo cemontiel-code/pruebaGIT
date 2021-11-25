@@ -85,14 +85,18 @@ html {
   display: flex;
   padding: 2.5%;
   height: 60vh;
+  
   background-color: white;
   background-position: center;
   background-size: cover;
   background-image: url(../assets/bg-index-min.png); }
+  .contentContainer--index p {
+    width: 40%;
+   }
 
 .contentContainer--indexContent {
   padding: 2.5%;
-  height: 60vh;
+  height: 70vh;
   background-color: white;
   background-position: center;
   background-size: cover;
@@ -101,14 +105,22 @@ html {
 
 .contSiteMap {
   background-color: #00adb5;
+  margin: 0.5rem;
   padding: 0.75rem; }
-
+  
 .contBusiness {
   grid-area: 1/1/ span 1 / span 3;
-  background-color: #393e46; }
+  margin: 0.5rem;
+  background-size: cover;
+  background-position: 15% 25%;
+  background-image: url(../assets/work.jpg);}
 
 .contProyect {
-  background-color: coral; }
+  margin: 0.5rem;
+  background-size: cover;
+  background-image: url(../assets/proyect.jpg);}
 
 .contService {
-  background-color: cornflowerblue; }
+  margin: 0.5rem;
+  background-size: cover;
+  background-image: url(../assets/support.jpg); }
