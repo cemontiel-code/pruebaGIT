@@ -20,9 +20,14 @@
 #indexheader a:hover {
   background-color: #393e4683;
 }
+* a {
+  font-family: "Montserrat",sans-serif;
+  text-decoration: none;
+  }
 
 html {
   scroll-behavior: smooth;
+
 }
 
 body {
@@ -101,51 +106,6 @@ label {
   color: var(--color1);
 }
 */
-#mainBodyIndex {
-  background-image: url(../assets/bg-index-min.png);
-}
-.navbar {
-  position: sticky;
-  background-color: var(--color1);
-  transition: width 300ms ease;
-  overflow: hidden;
-  height: 3.5rem;
-}
-
-.nav-list {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-  flex-basis: 7rem;
-}
-
-.nav-item {
-  list-style: none;
-  height: 100%;
-  color: var(--color3);
-  transition: font-size 200ms;
-  padding: 1.2vh;
-}
-
-.nav-item:first-child {
-  background-color: var(--color2);
-  align-content: flex-start;
-}
-
-.nav-item a {
-  color: var(--color3);
-  height: 100%;
-  text-decoration: none;
-}
-
-.nav-item:hover {
-  font-size: 24px;
-  background-color: #445c7c;
-}
-
 .social-list {
   display: flex;
   flex-flow: row;
@@ -210,17 +170,23 @@ label {
 .header--index {
   background-image: url(../assets/bg-index-header.jpg);
   background-size: cover;
-  height: 95vh;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  margin:0;
+  padding: 0;
   display: flex;
   color: #eeeeee; }
   .header--index svg {
     color: #00adb5;
     width: 150px; }
   .header--index a {
-    height: 94vh;
-    width: 98vw; }
+    text-decoration: none;
+    color: #eeeeee;
+    height: 100vh;
+    width: 98.5vw; 
+    display: flex;
+    transition: 350ms;
+    align-items: center;
+    justify-content: center;}
   .header--index a:hover {
     background-color: #393e4683; }
 
@@ -235,7 +201,7 @@ label {
   background-color: #222831;
   transition: width 300ms ease;
   overflow: hidden;
-  height: 3.5rem; }
+  height: 3rem; }
 
 .navbar__list {
   padding: 0;
@@ -249,11 +215,12 @@ label {
 .navbar__item {
   list-style: none;
   height: 100%;
-  color: #eeeeee;
-  transition: font-size 200ms;
-  padding: 1.2vh; }
+  transition: 500ms;
+  padding:0.5vh; }
   .navbar__item a {
-    color: #eeeeee;
+    display: flex;
+    align-items: center;
+    color: #eeeeee88;
     height: 100%;
     text-decoration: none; }
   .navbar__item svg {
@@ -268,9 +235,8 @@ label {
   .navbar__item:first-child:hover svg {
   color: white; }
 
-.navbar__item:hover {
-  font-size: 24px;
-  background-color: #445c7c; }
+.navbar__item:hover { background-color: #445c7c; }
+.navbar__item a:hover { color:#eeeeee; }
 
 .background--proyect{
   background-image: url(../assets/work.jpg);
@@ -279,22 +245,22 @@ label {
 
 .contentContainer {
   padding: 2.5%;
-  height: 60vh;
+  height: 100vh;
   padding: auto; }
 
 .contentContainer--index {
   padding: 2.5%;
-  height: 60vh;
+  height: 100vh;
   background-color: white;
   background-position: center;
   background-size: cover;
-  background-image: url(../assets/bg-index-min.png); }
+  background-image: url(../assets/bg-index-min.jpg); }
   .contentContainer--index p {
     width: 100%; }
 
-.contentContainer--indexContent {
+.contentContainer--indexCards {
   padding: 2.5%;
-  height: 70vh;
+  height: 100vh;
   background-color: white;
   background-position: center;
   background-size: cover;
@@ -310,7 +276,7 @@ label {
   background-color: white;
   padding: auto; }
   
-.contSiteMap {
+.indexCard--SiteMap {
   background-color: #00adb5;
   padding: 2%;
   margin: 0.5rem;
@@ -318,7 +284,7 @@ label {
   box-shadow: #393e4683 5px 5px 5px;
   padding: 0.75rem; }
   
-.contBusiness {
+.indexCard--Business {
   grid-area: 1/1/ span 1 / span 3;
   margin: 0.5rem;
   padding: 2%;
@@ -330,7 +296,7 @@ label {
   background-position: 15% 25%;
   background-image: url(../assets/work.jpg); }
 
-.contProyect {
+.indexCard--Proyect {
   margin: 0.5rem;
   font-size: 36px;
   padding: 2%;
@@ -340,7 +306,7 @@ label {
   background-size: cover;
   background-image: url(../assets/proyect.jpg); }
 
-.contService {
+.indexCard--Service {
   margin: 0.5rem;
   padding: 2%;
   font-size: 36px;
@@ -350,6 +316,16 @@ label {
   background-size: cover;
   background-image: url(../assets/support.jpg); }
 
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
 
 /* Small screens */
