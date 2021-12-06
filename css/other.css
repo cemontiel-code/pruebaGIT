@@ -272,6 +272,13 @@ label {
   display: grid;
   grid: auto auto auto; }
 
+.contentContainer--indexCards a{
+  color: #eeeeee;
+  height: fit-content;
+  transition: 350ms;
+}
+.contentContainer--indexCards a:checked{ background-color: #eeeeee36;}
+  
 .contentContainer--proyect {
   padding: 2.5%;
   height: 40vh;
@@ -297,6 +304,7 @@ label {
   box-shadow: #393e4683 5px 5px 5px;
   font-size: 36px;
   color: var(--color3);
+  border: none;
   background-size: cover;
   background-position: 15% 25%;
   background-image: url(../assets/work.jpg); }
