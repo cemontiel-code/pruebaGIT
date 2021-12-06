@@ -34,6 +34,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color0);
+  transition: 300ms ease;
 }
 
 footer {
@@ -199,7 +200,7 @@ label {
 .navbar {
   position: sticky;
   background-color: #222831;
-  transition: width 300ms ease;
+  transition: 300ms ease;
   overflow: hidden;
   height: 3rem; }
 
@@ -245,23 +246,27 @@ label {
 
 .contentContainer {
   padding: 2.5%;
-  height: 100vh;
+  height: 80vh;
   padding: auto; }
 
 .contentContainer--index {
+  margin-top:10px ;
+  margin-bottom:10px ;
   padding: 2.5%;
-  height: 100vh;
+  height: 80vh;
   background-color: white;
   background-position: center;
   background-size: cover;
-  background-image: url(../assets/bg-index-min.jpg); }
+  background-image: url(../assets/bg-index-min.jpg); 
+  box-shadow: #445c7c2d 1px 15px 10px;}
   .contentContainer--index p {
-    width: 100%; }
+    width: 38%; }
 
 .contentContainer--indexCards {
+  z-index: -1;
   padding: 2.5%;
-  height: 100vh;
-  background-color: white;
+  height: 80vh;
+  background-color: none;
   background-position: center;
   background-size: cover;
   display: grid;
@@ -319,7 +324,7 @@ label {
 .tag {
   opacity: 0;
   transform: translate(0, 10vh);
-  transition: all 1s;
+  transition: all 600ms;
 }
 
 .tag.visible {
@@ -335,10 +340,6 @@ label {
   }
 
   footer {
-    display: none;
-  }
-
-  .logo {
     display: none;
   }
 
