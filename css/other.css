@@ -1,33 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Yaldevi&display=swap");
 :root {
-  font-size: 18px;
   font-family: "Yaldevi", "Montserrat", sans-serif;
   --color0: #222831;
   --color1: #393e46;
-  --color2: #00adb5;
+  --color2: #93c54b;
   --color3: #eeeeee;
 }
 
-
-#h2over {
-  background-color: #393e4683;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-#indexheader a:hover {
-  background-color: #393e4683;
-}
-* a {
-  font-family: "Montserrat",sans-serif;
-  text-decoration: none;
-  }
-
 html {
   scroll-behavior: smooth;
-
+  font-size:18px;
 }
 
 body {
@@ -41,8 +23,10 @@ footer {
   padding: 1vh 2vh;
   display: flex;
   margin-bottom: 0rem;
-  background: var(--color2);
-  bottom: 0;
+  background: hsl(183, 100%, 35%);
+  justify-content: space-between;
+  top: 100%;
+  height: 20vh;
 }
 
 #inicio {
@@ -91,22 +75,6 @@ label {
   display: inline-block;
 }
 
-#hOverlay {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}/*
-.contentContainer{
-  display:flex;
-  padding: 2.5%;
-  height: 60vh;
-  background-color: white;
-  background-position: center ;
-  background-size: cover;
-  color: var(--color1);
-}
-*/
 .social-list {
   display: flex;
   flex-flow: row;
@@ -125,32 +93,20 @@ label {
 
 #logo-img {
   animation-name: girar;
-  animation-duration: 1.7s;
+  animation-duration: 2.7s;
   animation-fill-mode: both;
   animation-timing-function: linear;
 }
 
 @keyframes girar {
-  0% {
-    color: hsl(183, 100%, 35%);
-    transform: rotate(0deg);
-  }
-  25% {
-    color: hsl(193, 100%, 35%);
-    transform: rotate(90deg);
-  }
-  50% {
-    color: hsl(203, 100%, 35%);
-    transform: rotate(180deg);
-  }
-  75% {
-    color: hsl(193, 100%, 35%);
-    transform: rotate(270deg);
-  }
-  100% {
-    color: hsl(183, 100%, 35%);
-    transform: rotate(360deg);
-  }
+  0%  {color: #93c54b }
+  25% {color: hsl(183, 100%, 35%); }
+  35% {color: hsl(203, 100%, 35%); }
+  50% {color: hsl(286, 100%, 35%); }
+  65% {color: hsl(203, 100%, 35%); }
+  75% {color: hsl(183, 100%, 35%); }
+  85% {color:#93c54b }
+  100% {color: hsl(286, 100%, 35%); }
 }
 /*sass made css */
 .header {
@@ -158,7 +114,7 @@ label {
   align-items: center;
   justify-content: center;
   display: flex;
-  color: #eeeeee;
+
   text-decoration: none;}
   .header svg {
     color: var(--color2);
@@ -197,7 +153,7 @@ label {
   justify-content: center;
   align-items: center; }
 
-.navbar {
+.navibar {
   position: sticky;
   background-color: #222831;
   transition: 300ms ease;
@@ -225,29 +181,42 @@ label {
     height: 100%;
     text-decoration: none; }
   .navbar__item svg {
-    color: black;
+    color: #eeeeee;
     transition: color 200ms;
     width: 40px;
    }
 
 .navbar__item:first-child {
-  background-color: #00adb5;
+  background-color: #93c54b;
   align-content: flex-start; }
-  .navbar__item:first-child:hover svg {
-  color: white; }
+  .navbar__item:first-child svg {color: black;}
+  .navbar__item:first-child:hover svg {color: #eeeeee; }
 
 .navbar__item:hover { background-color: #445c7c; }
+
 .navbar__item a:hover { color:#eeeeee; }
+.navbar__item svg:hover { color:hsl(138, 54%, 55%);; }
+
+.nav__icons{display: none;}
 
 .background--proyect{
   background-image: url(../assets/work.jpg);
-  background-size: cover;
-}
+  background-size: cover; }
+
+.background--business{
+  background-image: url(../assets/desing.jpg);
+  background-size: cover; }
+.background--services{
+  background-image: url(../assets/enginer.jpg);
+  background-size: cover; }
 
 .contentContainer {
   padding: 2.5%;
-  height: 80vh;
-  padding: auto; }
+  height: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  }
 
 .contentContainer--index {
   margin-top:10px ;
@@ -263,7 +232,6 @@ label {
     width: 38%; }
 
 .contentContainer--indexCards {
-  z-index: -1;
   padding: 2.5%;
   height: 80vh;
   background-color: none;
@@ -272,21 +240,39 @@ label {
   display: grid;
   grid: auto auto auto; }
 
+.contentContainer--Goals {
+    padding: 2.5%;
+    padding: 0; 
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;}
+  .contentContainer--Goals svg { color: #93c54b;}
+    
 .contentContainer--indexCards a{
   color: #eeeeee;
   height: fit-content;
   transition: 350ms;
 }
 .contentContainer--indexCards a:checked{ background-color: #eeeeee36;}
-  
-.contentContainer--proyect {
-  padding: 2.5%;
-  height: 40vh;
-  width: 80vw;
-  justify-content: center;
-  border-radius: 15px;
-  background-color: white;
-  padding: auto; }
+
+.highlight--header {
+  width: 98vw;
+  background-color: #2b2b2b8f;
+  color: #d1d1d1;
+  justify-content: center;}
+.contentContainer--main {
+    padding: 2.5%;
+    height: auto;
+    width: 80vw;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: white;
+    padding: auto;
+  }
+  .contentContainer--main h3 { color: #393e46;}
+  .contentContainer--main li { list-style: none;
+  color: #393e46b9;}
+
   
 .indexCard--SiteMap {
   background-color: #00adb5;
@@ -331,8 +317,8 @@ label {
 
 .tag {
   opacity: 0;
-  transform: translate(0, 10vh);
-  transition: all 600ms;
+  transform: translate(0, 5vh);
+  transition: all 450ms;
 }
 
 .tag.visible {
@@ -340,32 +326,101 @@ label {
   transform: translate(0, 0);
 }
 
+.p80{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#mision{  
+  background-color: #0091b56c;
+  text-align: center;
+  width: 40%;
+  margin: 0.5rem;
+  border-radius: 15px;
+  padding: 0.75rem;}
+  
+  #vision{  
+  text-align: center;
+  background-color: #00acb583;
+  width: 40%;
+  margin: 0.5rem;
+  border-radius: 15px;
+  padding: 0.75rem;}
+
 
 /* Small screens */
 @media only screen and (max-width: 720px) {
-  body {
-    background-color: white;
+  
+  html{
+    font-size:  calc(1em + 1vw);
   }
 
   footer {
-    display: none;
+    display: block;
+    height:270px;
+    justify-items: center;
   }
 
   main {
-    width: 90%;
+    width: 100%;
   }
 
-  .mainBody {
-    margin: 2vw;
-  }
-
-  .navbar {
+  .navibar {
+    z-index: 3;
     bottom: 0;
     width: 100vw;
     height: 5rem;
     position: fixed;
   }
-  .nav-link span {
-    display: hidden;
+  
+  .nav__icons {
+    display: block;
+  }
+
+  .nav__text {
+    display: none;
+  }
+  .background--business{
+    background: #eeeeee;
+  }
+
+  .background--proyect{
+    background: #eeeeee;
+  }
+
+  .contentContainer--index{
+    background: #ebebeb;
+    height: auto;
+  }
+  .contentContainer--index p{width: 90%;}
+
+  .contentContainer--indexCards{
+    display: block;
+  }
+
+  .contentContainer--main{
+    width: 90vw;
+    margin: 2.5vw;
+    padding: 0%;
+  }
+  .contentContainer--Goals{
+    display: block;
+  }
+
+  #vision{ width: 90%;}
+
+  #mision{ width: 90%;}
+
+  .contentContainer{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+    background-color: white;
+  }
+
+  .highlight--header{
+    color: #eeeeee;
+
   }
 }
