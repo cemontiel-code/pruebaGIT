@@ -199,6 +199,9 @@ label {
 
 .nav__icons{display: none;}
 
+.background--contact{
+  background-image: url(../assets/support.jpg);
+  background-size: cover; }
 .background--proyect{
   background-image: url(../assets/work.jpg);
   background-size: cover; }
@@ -330,6 +333,11 @@ label {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+.list__div{
+  display: flex;
+  justify-content: space-between;
+}
 #mision{  
   background-color: #0091b56c;
   text-align: center;
@@ -417,6 +425,9 @@ label {
     justify-content: center;
     padding: 0.5em;
     background-color: white;
+  }
+  .list__div{
+    display: block;
   }
 
   .highlight--header{
